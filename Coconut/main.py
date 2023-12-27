@@ -27,5 +27,14 @@ async def on_resumed():
     logger.info("Resumed")
 
 
+@client.event
+async def on_message(message: discord.Message):
+    content = message.content
+    commands = content.split()
+    length = len(commands)
+    send = message.channel.send
+
+
+
 def run(token: str):
     client.run(token, log_handler=None)
