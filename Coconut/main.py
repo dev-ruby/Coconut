@@ -1,4 +1,5 @@
 import discord
+
 from . import log_manager
 
 client = discord.Client(intents=discord.Intents.all())
@@ -33,7 +34,6 @@ async def on_message(message: discord.Message):
     commands = content.split()
     length = len(commands)
     send = message.channel.send
-
 
 
 def run(token: str):
